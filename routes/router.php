@@ -3,9 +3,9 @@
 $router = new \Bramus\Router\Router();
 
 /**
- * App Routes
+ * Web Routes
  */
-require_once __DIR__ . '/app.php';
+require_once __DIR__ . '/web.php';
 
 /**
  * API Routes

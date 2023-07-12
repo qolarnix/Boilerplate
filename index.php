@@ -11,6 +11,11 @@ require __DIR__ . '/vendor/autoload.php';
 $env = Dotenv\Dotenv::createImmutable(__DIR__);
 
 /**
+ * Database
+ */
+require_once __DIR__ . '/database/bootstrap.php';
+
+/**
  * Load Plugins
  */
 require_once __DIR__ . '/plugins/plugins.php';
