@@ -17,6 +17,9 @@
         ],
         "tw-min": [
             "tailwindcss -i assets/styles/style.css -o assets/styles/dist.css --minify"
+        ],
+        "db-create": [
+            "touch -- database/default.db || exit"
         ]
     }
 }

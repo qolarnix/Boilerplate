@@ -13,3 +13,5 @@ $capsule->addConnection([
 
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
+
+require_once __DIR__ . '/actions/users.php';
