@@ -1,5 +1,13 @@
 # PHP Project Boilerplate
 
+## What is it
+- Latest version of PHP
+- Eloquent from laravel
+- Great router
+- Bring your own auth
+- HTMX for ajax
+- Tailwindcss
+
 ## How to use
 
 ### Commands
