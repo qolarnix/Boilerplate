@@ -7,6 +7,7 @@
 - Using the latest version of PHP and all of its features
 - [ORM from Laravel for maximum productivity](https://github.com/illuminate/database)
 - [Bramus/Router for web & api routes](https://github.com/bramus/router)
+- Simple templating function but you can also bring your own engine
 - Choose your own auth solution
 
 ### Commands
