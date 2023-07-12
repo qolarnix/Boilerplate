@@ -1,6 +1,6 @@
 # PHP Project Boilerplate
 
-## What is this boilerplate for?
+### What is this boilerplate for?
 - Build interactive websites without node/npm/javascript
 - [HTMX for ajax, animations & forms](https://htmx.org/docs/)
 - [Tailwindcss standalone executable](https://tailwindcss.com/blog/standalone-cli)
@@ -17,5 +17,9 @@
 - `composer run tw-dev` watch tailwind files
 - `composer run tw-min` minify dist for production
 - `composer run db-create` create sqlite file before migrations
+
 ### Migrations
 - `php database/migrations/users.php` create table for users and insert faker data
+
+### Contributing
+- Make a PR
