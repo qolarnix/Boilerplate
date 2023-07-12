@@ -4,3 +4,5 @@ vendor/
 
 database/default.db
 database/*.db
+
+assets/styles/dist.css
