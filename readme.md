@@ -16,5 +16,5 @@
 - `composer run tw-dev` watch tailwind files
 - `composer run tw-min` minify dist for production
 - `composer run db-create` create sqlite file before migrations
-## Migrations
+### Migrations
 - `php database/migrations/users.php` create table for users and insert faker data
