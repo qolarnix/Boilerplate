@@ -11,3 +11,6 @@ $users = get_users();
 <?php endforeach; ?>
 
 <h1 class="text-3xl font-bold text-white"><?php echo $domain . ':' . $port; ?></h1>
+
+<?php
+get_template('footer');
