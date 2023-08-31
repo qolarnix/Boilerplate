@@ -6,8 +6,8 @@ use Symfony\Component\Templating\Helper\SlotsHelper;
 use Symfony\Component\Templating\TemplateNameParser;
 
 $fs_loader = new Loader([
-    __DIR__ . '/components/%name%',
-    __DIR__ . '/pages/%name%'
+    __DIR__ . '/../components/%name%',
+    __DIR__ . '/../pages/%name%'
 ]);
 
 $template = new Engine(new TemplateNameParser(), $fs_loader);
