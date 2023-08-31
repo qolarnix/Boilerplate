@@ -20,11 +20,3 @@ function get_excerpt(string $input, int $length, string $decor = '...'): string 
     $excerpt = $short . $decor;
     return $excerpt;
 }
-
-/**
- * Escape
- */
-function escape(string $input): string {
-    $clean = htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
-    return $clean;
-}

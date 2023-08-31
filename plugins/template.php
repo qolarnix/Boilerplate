@@ -1,31 +1,14 @@
 <?php declare(strict_types=1);
 
-function get_template(string $template, array $data = array()): void {
-    $template = basename($template);
-    $location = '';
+use Symfony\Component\Templating\Loader\FilesystemLoader as Loader;
+use Symfony\Component\Templating\PhpEngine as Engine;
+use Symfony\Component\Templating\Helper\SlotsHelper;
+use Symfony\Component\Templating\TemplateNameParser;
 
-    $paths = array();
-    $paths[] = getcwd() . '/pages/' . $template . '.php';
-    $paths[] = getcwd() . '/components/' . $template . '.php';
+$fs_loader = new Loader([
+    __DIR__ . '/components/%name%',
+    __DIR__ . '/pages/%name%'
+]);
 
-    foreach($paths as $path) {
-        if(is_file($path)) {
-            $location = $path;
-            break;
-        }
-    }
-
-    if(!$location) {
-        $err_msg = 'Unable to locate template file: ';
-        trigger_error($err_msg . $template, E_USER_WARNING);
-        return;
-    }
-
-    extract($data, EXTR_SKIP);
-    ob_start();
-
-    include($location);
-
-    $output = ob_get_clean();
-    echo $output;
-}
+$template = new Engine(new TemplateNameParser(), $fs_loader);
+$template->set(new SlotsHelper());

@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-$router->get('/', function() use($env) {
+$router->get('/', function() use($env, $template) {
     $env->load();
 
-    get_template('test', [
+    echo $template->render('test.php', [
         'domain' => $_ENV['DOMAIN'],
         'port' => $_ENV['PORT']
     ]);

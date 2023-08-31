@@ -4,7 +4,8 @@
         "vlucas/phpdotenv": "^5.5",
         "guzzlehttp/guzzle": "^7.7",
         "illuminate/database": "^10.15",
-        "fakerphp/faker": "^1.23"
+        "fakerphp/faker": "^1.23",
+        "symfony/templating": "^6.3"
     },
     "scripts": {
         "dev": [
