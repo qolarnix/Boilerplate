@@ -20,5 +20,15 @@ $users = get_users();
     </div>
 </section>
 
+<section class="py-12 px-6">
+    <div class="container mx-auto">
+        <?php 
+            foreach($items as $item) {
+                echo $view->escape($item);
+            }
+        ?>
+    </div>
+</section>
+
 <?php
 echo $view->render('footer.php');

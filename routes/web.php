@@ -5,7 +5,8 @@ $router->get('/', function() use($env, $template) {
 
     echo $template->render('test.php', [
         'domain' => $_ENV['DOMAIN'],
-        'port' => $_ENV['PORT']
+        'port' => $_ENV['PORT'],
+        'items' => ['burger', 'pizza', 'sandwich']
     ]);
 });
 
