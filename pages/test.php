@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-echo $view->render('header.php');
+echo $view->render('header');
 
 
 $users = get_users();
@@ -31,4 +31,4 @@ $users = get_users();
 </section>
 
 <?php
-echo $view->render('footer.php');
+echo $view->render('footer');

@@ -1,14 +1,12 @@
 <?php declare(strict_types=1);
 
-use Symfony\Component\Templating\Loader\FilesystemLoader as Loader;
-use Symfony\Component\Templating\PhpEngine as Engine;
-use Symfony\Component\Templating\Helper\SlotsHelper;
-use Symfony\Component\Templating\TemplateNameParser;
+define('PROJECT_ROOT', realpath(__DIR__ . '/../'));
 
-$fs_loader = new Loader([
-    __DIR__ . '/../components/%name%',
-    __DIR__ . '/../pages/%name%'
-]);
+use Glacial\Template\TemplateEngine;
 
-$template = new Engine(new TemplateNameParser(), $fs_loader);
-$template->set(new SlotsHelper());
+$config = [
+    PROJECT_ROOT . '/components',
+    PROJECT_ROOT . '/pages'
+];
+
+$template = new TemplateEngine($config);

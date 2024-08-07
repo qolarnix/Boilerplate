@@ -3,7 +3,7 @@
 $router->get('/', function() use($env, $template) {
     $env->load();
 
-    echo $template->render('test.php', [
+    echo $template->render('test', [
         'domain' => $_ENV['DOMAIN'],
         'port' => $_ENV['PORT'],
         'items' => ['burger', 'pizza', 'sandwich']
