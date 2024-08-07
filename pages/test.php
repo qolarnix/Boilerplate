@@ -10,7 +10,10 @@ $users = get_users();
     <div class="container mx-auto">
 
         <?php foreach($users as $user): ?>
-            <p class="text-white"><?php echo $user['username']; ?></p><br>
+            <p class="text-white">
+                <?php echo $view->escape($user['username'], 'uppercase'); ?>
+            </p>
+            <br>
         <?php endforeach; ?>
 
         <h1 class="text-3xl font-bold text-white">
@@ -24,7 +27,7 @@ $users = get_users();
     <div class="container mx-auto">
         <?php 
             foreach($items as $item) {
-                echo $view->escape($item);
+                echo $view->escape($item, 'randomize') . '&nbsp;';
             }
         ?>
     </div>
