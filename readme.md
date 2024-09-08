@@ -4,11 +4,11 @@
 - Build interactive websites without node/npm/javascript
 - [HTMX for ajax, animations & forms](https://htmx.org/docs/)
 - [Tailwindcss standalone executable](https://tailwindcss.com/blog/standalone-cli)
-- Using the latest version of PHP and all of its features
-- [ORM from Laravel for maximum productivity](https://github.com/illuminate/database)
+- Take advantage of the latest version of PHP and its features
+- [Schema builder from Laravel](https://github.com/illuminate/database)
 - [Bramus/Router for web & api routes](https://github.com/bramus/router)
-- Simple templating function but you can also bring your own engine
-- Choose your own auth solution
+- Glacial template engine inspired by wordpress/plates
+- Choose your own auth solution (for now)
 
 ### Commands
 - `composer install` install deps
