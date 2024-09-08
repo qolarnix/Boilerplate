@@ -1,16 +1,13 @@
 <?php declare(strict_types=1);
 
-$router->get('/', function() use($env, $template) {
-    $env->load();
+global $template;
 
-    echo $template->render('test', [
-        'domain' => $_ENV['DOMAIN'],
-        'port' => $_ENV['PORT'],
-        'items' => ['burger', 'pizza', 'sandwich']
-    ]);
+$router->get('/', function() use($template) {
+    echo $template->render('glacial');
 });
 
-$router->get('/test', function() use($env) {
-    $env->load();
-    echo $_ENV['DOMAIN'] . ':' . $_ENV['PORT'];
+$router->get('/demo', function() use($template) {
+    echo $template->render('demo', [
+        'items' => ['burger', 'pizza', 'sandwich']
+    ]);
 });
