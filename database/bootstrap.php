@@ -1,17 +1,28 @@
-<?php declare(strict_types=1);
+<?php
 
-if(php_sapi_name() !== 'cli') $env->load();
+declare(strict_types=1);
 
-use Illuminate\Database\Capsule\Manager;
+use Surreal\Surreal;
 
-$capsule = new Manager;
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+use Bramus\Monolog\Formatter\ColoredLineFormatter;
 
-$capsule->addConnection([
-    'driver' => 'sqlite',
-    'database' => __DIR__ . '/default.db'
+$db = new Surreal();
+$url = "http://127.0.0.1:8000";
+
+$db->connect($url, [
+    'namespace' => 'test',
+    'database' => 'test'
 ]);
 
-$capsule->setAsGlobal();
-$capsule->bootEloquent();
+$db->signin([
+    "user" => "root",
+    "pass" => "root"
+]);
 
-require_once __DIR__ . '/actions/users.php';
+$logger = new Logger('migrate');
+
+$stream_handler = new StreamHandler('php://stdout');
+$stream_handler->setFormatter(new ColoredLineFormatter());
+$logger->pushHandler($stream_handler);

@@ -3,11 +3,5 @@
 global $template;
 
 $router->get('/', function() use($template) {
-    echo $template->render('glacial');
-});
-
-$router->get('/demo', function() use($template) {
-    echo $template->render('demo', [
-        'items' => ['burger', 'pizza', 'sandwich']
-    ]);
+    echo $template->render('lander');
 });

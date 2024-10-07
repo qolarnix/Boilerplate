@@ -1,11 +1,14 @@
 {
+    "minimum-stability": "dev",
     "require": {
         "bramus/router": "^1.6",
         "vlucas/phpdotenv": "^5.5",
         "guzzlehttp/guzzle": "^7.7",
-        "illuminate/database": "^10.15",
         "fakerphp/faker": "^1.23",
-        "glacial/template": "^2.0"
+        "glacial/template": "^2.0",
+        "surrealdb/surrealdb.php": "dev-main",
+        "monolog/monolog": "^3.0@dev",
+        "bramus/monolog-colored-line-formatter": "dev-master"
     },
     "scripts": {
         "dev": [
