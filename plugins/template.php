@@ -4,9 +4,11 @@ define('PROJECT_ROOT', realpath(__DIR__ . '/../'));
 
 use Glacial\Template\TemplateEngine;
 
-$config = [
-    PROJECT_ROOT . '/components',
-    PROJECT_ROOT . '/pages'
-];
+function glacialEngine() {
+    $config = [
+        PROJECT_ROOT . '/components',
+        PROJECT_ROOT . '/pages'
+    ];
 
-$template = new TemplateEngine($config);
+    return new TemplateEngine($config);
+}
